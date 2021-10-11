@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>This is 100</h1>
+<h1>This is 1</h1>
 <p>This is a paragraph.</p>
 
 </body>
