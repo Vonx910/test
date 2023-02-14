@@ -1,0 +1,21 @@
+CREATE DATABASE assessment;
+
+CREATE TABLE postcode(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    state VARCHAR(20) NOT NULL,
+    postcode VARCHAR(5) NOT NULL
+)
+
+CREATE TABLE customer(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    dob DATE NOT NULL,
+    address VARCHAR(50) NOT NULL,
+    postcode_id INT NOT NULL,
+    
+    FOREIGN KEY (postcode_id) REFERENCES postcode(id)
+)
+
+INSERT INTO postcode(postcode, state) VALUES('35000', 'Perak');
+INSERT INTO postcode(postcode, state) VALUES('50000', 'Wilayah Persekutuan');
+INSERT INTO postcode(postcode, state) VALUES('80000', 'Johor');
